@@ -1,7 +1,13 @@
 import Logo from './assets/Logotipo.png'
+import facebook from './assets/redes/facebook.png'
+import whatsapp from './assets/redes/whatsapp.png'
+import instagram from './assets/redes/instagram.png'
+import youtube from './assets/redes/youtube.png'
+import linkedin from './assets/redes/linkedin.png'
+import './encabezado.css'
 function Encabezado(){
     return (
-    <div>
+    <div className='encabezadoDiv'>
         <Logotipo/>
         <Menu/>
         <Redes/>
@@ -11,7 +17,7 @@ function Encabezado(){
 
 function Logotipo(){
     return(
-        <div>
+        <div className='logoDiv'>
            <img src={Logo} alt='Logotipo'/>
         </div>
     )
@@ -19,7 +25,7 @@ function Logotipo(){
 
 function Menu(){
     return(
-        <div>
+        <div className='menuPrincipalDiv'>
             <ul>
                 <li>Inicio</li>
                 <li>Acerca de</li>
@@ -32,13 +38,13 @@ function Menu(){
 }
 function Redes(){
     return(
-        <div>
+        <div className='redesDiv'>
             <ul>
-                <li>Facebook</li>
-                <li>Whatsapp</li>
-                <li>Instagram</li>
-                <li>Youtube</li>
-                <li>Linkedin</li>
+                <li><img src={facebook} alt='Facebook'/></li>
+                <li><img src={whatsapp} alt='Whatsapp'/></li>
+                <li><img src={instagram} alt='Instagram'/></li>
+                <li><img src={youtube} alt='Youtube'/></li>
+                <li><img src={linkedin} alt='Linkedin'/></li>
             </ul>
         </div>
     )

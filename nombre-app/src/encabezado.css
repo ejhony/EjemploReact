@@ -1,0 +1,20 @@
+.encabezadoDiv {
+    background-color: burlywood;
+    width: 100%;
+}
+.logoDiv {
+    display: inline-block;
+}
+.logoDiv img {
+    height: auto;
+    width: 150px;
+}
+.menuPrincipalDiv {
+    display: inline-block;
+    margin-left: 100px;
+    vertical-align: top;
+}   
+.menuPrincipalDiv ul {
+    list-style-type: none;
+    padding: 0;
+}

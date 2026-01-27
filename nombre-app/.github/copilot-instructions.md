@@ -1,70 +1,89 @@
 # Copilot Instructions for Nombre-App
 
 ## Project Overview
-This is a **Vite + React educational project** for the DSM course (Desarrollo de Software Moderno, Instructor: MTI Jhony). It's a minimal learning setup demonstrating component-based React architecture with Vite's Fast Refresh (HMR).
+**Vite + React educational project** (DSM course, Instructor: MTI Jhony). Minimal learning setup demonstrating component-based React with Vite's Fast Refresh. Focus is on teaching fundamental React patterns and component composition.
 
-## Architecture & Component Structure
+## Architecture
 
-### Key Component Hierarchy
-- **`App.jsx`** (root): Main entry point importing and composing child components
-- **`Encabezado.jsx`**: Header section with three internal components:
-  - `Logotipo()`: Displays company logo from `assets/Logotipo.png`
-  - `Menu()`: Navigation list (Inicio, Acerca de, Productos, Contacto, Sucursales)
-  - `Redes()`: Social media links (Facebook, WhatsApp, Instagram, YouTube, LinkedIn)
-- **`assets/expresiones.jsx`**: Expression/content section (in-progress, currently contains placeholder structure)
+### Component Hierarchy
+```
+App.jsx (root)
+├── Encabezado.jsx (colocated: Logotipo, Menu, Redes sub-components)
+└── Expresiones.jsx (colocated: Lista sub-component)
+```
 
-### Entry Point Flow
-1. `index.html` → mounts to `#root` div
-2. `main.jsx` → renders `<App>` inside `<React.StrictMode>`
-3. `App.jsx` → composes `<Encabezado>` and `<Expresiones>` components
+**Key Files:**
+- [App.jsx](src/App.jsx): Composes two main sections + course branding (h1/h2)
+- [Encabezado.jsx](src/encabezado.jsx): Header with logo, nav menu, social links (all sub-functions in same file)
+- [assets/expresiones.jsx](src/assets/expresiones.jsx): Demonstrates state/expressions and table rendering with `.map()`
+
+### Data & State Patterns
+- **No external state management** — components use local `const` for data (see `Expresiones.jsx`: `users` array, `nombre`/`apellido` strings)
+- **Lists rendered with `.map()`** — use `key={index}` (note: educational approach, not production best practice)
+- **No props drilling** — components are self-contained with hardcoded data
 
 ## Development Workflow
 
 ### Commands
-- **`npm run dev`**: Start local dev server with HMR (Vite default: http://localhost:5173)
-- **`npm run build`**: Production build output to `/dist`
-- **`npm run lint`**: ESLint check (enforces strict rules via `--max-warnings 0`)
-- **`npm run preview`**: Preview production build locally
+- `npm run dev`: Start dev server (Vite, http://localhost:5173, Hot Module Replacement enabled)
+- `npm run build`: Production build → `/dist`
+- `npm run lint`: Strict ESLint check (`--max-warnings 0` means ANY warning fails build)
+- `npm run preview`: Serve production build locally
 
-### Key Dependencies
-- **React 18.2.0**: With `react-dom` for DOM rendering
-- **Vite 5**: Build tool with `@vitejs/plugin-react` using Babel for Fast Refresh
-- **ESLint**: Strict linting with React plugin and React Hooks plugin
+### Tech Stack
+- React 18.2.0 + react-dom (browser rendering)
+- Vite 5 (@vitejs/plugin-react with Babel for Fast Refresh)
+- ESLint 8.55.0 (strict: recommended + react/jsx-runtime + react-hooks)
 
 ## Project Patterns & Conventions
 
 ### Component Structure
-1. **Functional Components**: All components use function declarations (not arrow functions), see `Encabezado.jsx`
-2. **Sub-components**: Internal helper components defined within parent file (e.g., `Logotipo()`, `Menu()`, `Redes()` inside `Encabezado.jsx`)
-3. **Named Exports**: Use `export default ComponentName` at file end
+1. **Function Declarations** (not arrow functions) — see all files
+2. **Sub-components as Internal Functions** — define helpers in same file (e.g., `Logotipo()`, `Menu()`, `Redes()` in `Encabezado.jsx`)
+3. **Single Export per File** — `export default ComponentName` at end
+4. **JSX in Expressions** — Inline JSX directly in returns, no JSX fragments needed yet
+5. **Table Structure Bug** — `<table>` includes `<th>` inside `<tbody>` (technically invalid; headers should be in `<thead>`)
 
-### Asset Imports
-- Static assets (images) imported at top: `import Logo from './assets/Logotipo.png'`
-- Vite automatically optimizes asset paths
+### Asset Import Pattern
+```jsx
+import Logo from './assets/Logotipo.png'
+import facebook from './assets/redes/facebook.png'
+// Use in JSX:
+<img src={Logo} alt='Logotipo'/>
+```
+Vite optimizes paths automatically; no need for `/public/` prefix.
 
-### Styling (Not Yet Implemented)
-- CSS files exist (`App.css`, `index.css`) but are minimal/empty
-- Follow React inline CSS or CSS module pattern when adding styles
+### Data Rendering
+- `.map(function(item, index) { return ... })` — used in `Lista()` for rendering rows
+- `key={index}` — acceptable for educational/static lists (avoid in production with dynamic data)
+- No conditional rendering patterns in use yet
+
+### Styling
+- [App.css](src/App.css), [index.css](src/index.css) — exist but empty
+- No global or component-scoped styles defined; structure ready for CSS/Tailwind/CSS Modules
 
 ## Common Tasks
 
 ### Adding a New Component
 1. Create `.jsx` file in `src/` or `src/assets/`
-2. Write functional component with `function ComponentName() { return (...) }`
-3. Add `export default ComponentName`
-4. Import and use in parent (e.g., `import MyComponent from "./MyComponent"`)
+2. Define as function: `function ComponentName() { return (...) }`
+3. Add internal sub-components if needed (same file)
+4. End with `export default ComponentName`
+5. Import in parent: `import MyComponent from './MyComponent'` (or `'./assets/MyComponent'`)
 
 ### Adding Images/Assets
-1. Place in `src/assets/`
-2. Import: `import imageName from './assets/filename.png'`
-3. Use in JSX: `<img src={imageName} alt="description" />`
+1. Place in `src/assets/` or `src/assets/redes/` (following existing structure)
+2. Import at file top: `import imgName from './assets/filename.png'`
+3. Use in JSX: `<img src={imgName} alt="description" />`
 
-### Running Linting Before Commit
-- Always run `npm run lint` to catch violations before pushing
-- All warnings fail the build (`--max-warnings 0`), so fix all issues
+### Before Committing
+- Always run `npm run lint` — strict config (`--max-warnings 0`) treats warnings as errors
+- Fix all ESLint violations before pushing
+- Hot Reload enabled during `npm run dev` — use for rapid iteration
 
 ## Notes for AI Agents
-- This is an **educational/tutorial project** — code may be incomplete or intentionally simplified
-- `expresiones.jsx` has incomplete state (`const nombre` with no initialization) — understand this is likely intentional for student exercises
-- Fast Refresh means components reload without losing state during development — leverage this for rapid iteration
-- React Strict Mode enabled (`<React.StrictMode>`) provides development warnings and double-invokes effects
+- **Educational Project** — incomplete/simplified by design; code teaches React fundamentals
+- **Intentional Gaps** — no state management, no conditional rendering, minimal CSS — students fill these in
+- **Table Structure** — `<th>` in `<tbody>` is a known issue (acceptable for educational purposes)
+- **Fast Refresh** — component reloads preserve local state; leverage for iterative development
+- **React.StrictMode** — provides extra dev warnings; don't suppress in dev builds
