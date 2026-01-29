@@ -59,8 +59,9 @@ Vite optimizes paths automatically; no need for `/public/` prefix.
 - No conditional rendering patterns in use yet
 
 ### Styling
-- [App.css](src/App.css), [index.css](src/index.css) — exist but empty
-- No global or component-scoped styles defined; structure ready for CSS/Tailwind/CSS Modules
+- **Active**: [encabezado.css](src/encabezado.css) — contains Flexbox layout for header (logo, menu, social links)
+- **Inactive**: [App.css](src/App.css), [index.css](src/index.css) — exist but empty
+- Pattern: Import CSS directly in component file (`import './encabezado.css'` at top of component)
 
 ## Common Tasks
 
