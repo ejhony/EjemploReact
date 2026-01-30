@@ -5,12 +5,14 @@ import instagram from './assets/redes/instagram.png'
 import youtube from './assets/redes/youtube.png'
 import linkedin from './assets/redes/linkedin.png'
 import './encabezado.css'
+
 function Encabezado(){
     return (
     <div className='encabezadoDiv'>
         <Logotipo/>
         <Menu/>
         <Redes/>
+        
     </div>
     )
 }

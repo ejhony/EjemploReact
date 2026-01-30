@@ -9,7 +9,7 @@
 
 
 .logoDiv img {
-    width: 120px;
+    width: 180px;
     height: auto;
     display: block;
     border-radius: 15px;
@@ -48,4 +48,99 @@
 .redesDiv img {
     width: 50px; 
     height: auto;
+}
+
+
+.cardContainer {
+    display: flex;
+    justify-content: center;  
+    align-items: center;     
+    gap: 50px;               
+    flex-wrap: wrap;          
+    width: 100%;              
+    padding: 20px 0;         
+}
+
+
+.cardPepe {
+  background-color: white;
+  width: 200px;       
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+}
+.card1 {
+    background-color: rgb(255, 255, 255);
+    width: 200px;
+    padding: 15px;
+    border: 3px solid #ffffff;
+    text-align: center;
+    margin-top: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.card1 img {
+    width: 50%;
+    height: 50%;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+    margin-bottom: 15px;
+    text-align: center;
+}
+.card2 {
+    background-color: rgb(255, 255, 255);
+    width: 300px;
+    padding: 15px;
+    border: 3px solid #ffffff;
+    text-align: center;
+    margin-top: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.card2 img {
+    width: 50%;
+    height: 50%;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+    margin-bottom: 15px;
+    text-align: center;
+}
+.card3 {
+    background-color: rgb(255, 255, 255);
+    width: 250px;
+    padding: 15px;
+    border: 3px solid #ffffff;
+    text-align: center;
+    margin-top: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+.card3 img {
+    width: 50%;
+    height: 50%;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+    margin-bottom: 15px;
+    text-align: center;
+}
+.expresionesContainer {
+    text-align: center; 
+    padding: 20px;
+}
+
+.listaTexto {
+    margin-top: 20px; 
+}
+.piePagina {
+    background-color: #333; 
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    margin-top: 50px;
+    font-family: 'Arial', sans-serif;
+}
+
+.piePagina p {
+    margin: 5px 0;
 }
