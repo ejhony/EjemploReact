@@ -1,7 +1,7 @@
 import elpepe from './cards/elpepe.png'
 import etesech from './cards/etesech.png'
 import potaxio from './cards/potaxio.png'
-
+import juan from './cards/juan.png'
 function Cards(){
     return(
         <section>
@@ -27,6 +27,11 @@ function Cards(){
                     <p>Con arroz blanco</p>
                 </div>
 
+                <div className="card4">
+                    <img src={juan} alt="Juan"/>
+                    <h2>juano</h2>
+                    <p>juan</p>
+                </div>
             </div>
         </section>
     )
