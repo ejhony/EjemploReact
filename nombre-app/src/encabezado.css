@@ -1,12 +1,14 @@
+
+
 .encabezadoDiv {
-    background-color:antiquewhite;
+    background-color: burlywood;
     padding: 10px 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-family: 'Arial', sans-serif;
-}
 
+}
 
 .logoDiv img {
     width: 180px;
@@ -31,7 +33,12 @@
     font-weight: bold;
     cursor: pointer;
     border-radius: 4px;
-    
+    transition: background-color 0.3s; 
+}
+
+
+.menuPrincipalDiv ul li:hover {
+    background-color: #2caea5;
 }
 
 .redesDiv ul {
@@ -42,122 +49,14 @@
     margin: 0;
     padding: 0;
     cursor: pointer;
-    
 }
 
 .redesDiv img {
     width: 50px; 
     height: auto;
+    transition: transform 0.2s;
 }
 
-
-.cardContainer {
-    display: flex;
-    justify-content: center;  
-    align-items: center;     
-    gap: 50px;               
-    flex-wrap: wrap;          
-    width: 100%;              
-    padding: 20px 0;         
-}
-
-
-.cardPepe {
-  background-color: white;
-  width: 200px;       
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  border-radius: 8px;
-}
-.card1 {
-    background-color: rgb(255, 255, 255);
-    width: 200px;
-    padding: 15px;
-    border: 3px solid #ffffff;
-    text-align: center;
-    margin-top: 25px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-}
-
-.card1 img {
-    width: 50%;
-    height: 50%;
-    border-radius: 10px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
-    margin-bottom: 15px;
-    text-align: center;
-}
-.card2 {
-    background-color: rgb(255, 255, 255);
-    width: 300px;
-    padding: 15px;
-    border: 3px solid #ffffff;
-    text-align: center;
-    margin-top: 25px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-}
-
-.card2 img {
-    width: 50%;
-    height: 50%;
-    border-radius: 10px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
-    margin-bottom: 15px;
-    text-align: center;
-}
-.card3 {
-    background-color: rgb(255, 255, 255);
-    width: 250px;
-    padding: 15px;
-    border: 3px solid #ffffff;
-    text-align: center;
-    margin-top: 25px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-}
-.card3 img {
-    width: 50%;
-    height: 50%;
-    border-radius: 10px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
-    margin-bottom: 15px;
-    text-align: center;
-}
-.card4 {
-    background-color: rgb(255, 255, 255);
-    width: 250px;
-    padding: 15px;
-    border: 3px solid #ffffff;
-    text-align: center;
-    margin-top: 25px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-}
-.card4 img {
-    width: 50%;
-    height: 50%;
-    border-radius: 10px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
-    margin-bottom: 15px;
-    text-align: center;
-}
-.expresionesContainer {
-    text-align: center; 
-    padding: 20px;
-}
-
-.listaTexto {
-    margin-top: 20px; 
-}
-.piePagina {
-    background-color: #333; 
-    color: white;
-    text-align: center;
-    padding: 20px;
-    width: 100%;
-    margin-top: 50px;
-    font-family: 'Arial', sans-serif;
-}
-
-.piePagina p {
-    margin: 5px 0;
+.redesDiv img:hover {
+    transform: scale(1.1); 
 }
