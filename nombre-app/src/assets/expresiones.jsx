@@ -6,6 +6,7 @@ function Expresiones({ vista }) {
       {vista === "Inicio" && <h1>WELCUMM!!!</h1>}
       {vista === "AcercaDe" }
       {vista === "Productos" && <h1>DE FINISIMA CALIDAD</h1>}
+      {vista === "Galeria" && <h1>GALERIA DE IMAGENES</h1>}
       {vista === "Contacto" && <h1>Contáctanos</h1>}
       {vista === "Sucursales" && <h1>Nuestras Sucursales</h1>}
     </div>

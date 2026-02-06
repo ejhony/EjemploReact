@@ -31,6 +31,7 @@ function Menu({ cambiarVista }) {
                 <li onClick={() => cambiarVista("Inicio")}>INICIO</li>
                 <li onClick={() => cambiarVista("AcercaDe")}>ACERCA DE</li>
                 <li onClick={() => cambiarVista("Productos")}>PRODUCTOS</li>
+                <li onClick={() => cambiarVista("Galeria")}>GALERIA</li>
                 <li onClick={() => cambiarVista("Contacto")}>CONTACTO</li>
                 <li onClick={() => cambiarVista("Sucursales")}>SUCURSALES</li>
             </ul>
@@ -40,17 +41,28 @@ function Menu({ cambiarVista }) {
 
 
 function Redes() {
-    return (
-        <div className='redesDiv'>
-            <ul>
-                <li><img src={facebook} alt='Facebook' /></li>
-                <li><img src={whatsapp} alt='Whatsapp' /></li>
-                <li><img src={instagram} alt='Instagram' /></li>
-                <li><img src={youtube} alt='Youtube' /></li>
-                <li><img src={linkedin} alt='Linkedin' /></li>
-            </ul>
-        </div>
-    )
+  return (
+    <div className="redesDiv">
+      <ul>
+        <li>
+          <img className="fb" src={facebook} alt="Facebook" />
+        </li>
+        <li>
+          <img className="wsp" src={whatsapp} alt="Whatsapp" />
+        </li>
+        <li>
+          <img className="inst" src={instagram} alt="Instagram" />
+        </li>
+        <li>
+          <img className="yt" src={youtube} alt="Youtube" />
+        </li>
+        <li>
+          <img className="lnk" src={linkedin} alt="Linkedin" />
+        </li>
+      </ul>
+    </div>
+  );
 }
+
 
 export default Encabezado

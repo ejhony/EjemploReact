@@ -59,13 +59,31 @@
     padding: 0;
     cursor: pointer;
 }
-
-.redesDiv img {
-    width: 50px; 
-    height: auto;
-    transition: transform 0.2s;
+.redesDiv .fb{
+    width: 100px;
+    height: 100px;
 }
-
+.redesDiv .wsp{
+    width: 130px;
+    height: 110px;
+}
+.redesDiv .inst{
+    width: 80px;
+    height: 80px;
+}
+.redesDiv .yt{
+    width: 120px;
+    height: 80px;
+}
+.redesDiv .lnk{
+    width: 120px;
+    height: 130px;
+}
+.redesDiv img {
+    width: 100px;
+    height: 90px;
+    transition: transform 0.3s; 
+}
 .redesDiv img:hover {
     transform: scale(1.1); 
 }
