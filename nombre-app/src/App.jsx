@@ -11,8 +11,6 @@ function App(){
     <Cards/>
     <Footer/>
     <Promociones user="Jhony"/>
-  <h1>#5C DSM</h1>
-  <h2>M.T.I. Jhony</h2>
   </div>
   )
 }

@@ -29,11 +29,11 @@ function Menu(){
     return(
         <div className='menuPrincipalDiv'>
             <ul>
-                <li>Inicio</li>
-                <li>Acerca de</li>
-                <li>Productos</li>
-                <li>Contacto</li>
-                <li>Sucursales</li>
+                <li>INICIO</li>
+                <li>ACERCA DE</li>
+                <li>PRODUCTOS</li>
+                <li>CONTACTO</li>
+                <li>SUCURSALES</li>
             </ul>
         </div>
     )

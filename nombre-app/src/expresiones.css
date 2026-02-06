@@ -1,0 +1,19 @@
+.expresionesContainer {
+    max-width: 900px;
+    margin: 40px auto;     
+    padding: 30px;
+    text-align: center;    
+    background-color: antiquewhite;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.listaTexto {
+    margin-top: 20px;
+}
+
+.listaTexto p {
+    font-size: 18px;
+    margin: 8px 0;
+    color: #333;
+}

@@ -1,3 +1,5 @@
+import '../expresiones.css'
+
 function Expresiones(){
     const nombre = "Jhony";
     const apellido = "Ibarra Gonzalez";

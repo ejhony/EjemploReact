@@ -1,0 +1,27 @@
+.pieDiv {
+    background-color: hsl(34, 44%, 69%); 
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: 60px;
+    border-radius: 16px;
+    display: flex;
+    font-style: italic;
+    font-weight: bold;
+}
+.pieIzqDiv, .pieDerDiv {
+    margin: 10px 0;
+    text-align: left;
+    padding-left: 20px;
+}
+.pieDerDiv {
+    text-align: right;
+    padding-right: 20px;
+}
+.pieDiv p {
+    margin: 6px 0;
+    color: #2f2f2f;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: bold;
+}
+

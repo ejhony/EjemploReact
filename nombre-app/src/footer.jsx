@@ -1,11 +1,15 @@
-
+import './footer.css'
 
 function Footer() {
     return (
-        <footer className="piePagina">
-            <p><strong>#5C DSM</strong> - M.T.I. Jhony Ibarra Gonzalez</p>
-            <p>&copy; {new Date().getFullYear()} Todos los derechos reservados.</p>
-        </footer>
+        <div className="pieDiv" >
+            <div className='pieIzqDiv'>
+                <p>© 2024 Jojos Corporation. Todos los derechos reservados.</p>
+            </div>
+            <div className='pieDerDiv'>
+                <p>Jhonatan Eliel Ibarra Gonzalez</p>
+            </div>
+        </div>
     );
 }
 
