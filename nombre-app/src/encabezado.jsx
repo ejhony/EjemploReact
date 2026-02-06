@@ -6,49 +6,51 @@ import youtube from './assets/redes/youtube.png'
 import linkedin from './assets/redes/linkedin.png'
 import './encabezado.css'
 
-function Encabezado(){
+function Encabezado({ cambiarVista }) {
     return (
-    <div className='encabezadoDiv'>
-        <Logotipo/>
-        <Menu/>
-        <Redes/>
-        
-    </div>
-    )
-}
-
-function Logotipo(){
-    return(
-        <div className='logoDiv'>
-           <img src={Logo} alt='Logotipo'/>
+        <div className='encabezadoDiv'>
+            <Logotipo />
+            <Menu cambiarVista={cambiarVista} />
+            <Redes />
         </div>
     )
 }
 
-function Menu(){
-    return(
+function Logotipo() {
+    return (
+        <div className='logoDiv'>
+            <img src={Logo} alt='Logotipo' />
+        </div>
+    )
+}
+
+function Menu({ cambiarVista }) {
+    return (
         <div className='menuPrincipalDiv'>
             <ul>
-                <li>INICIO</li>
-                <li>ACERCA DE</li>
-                <li>PRODUCTOS</li>
-                <li>CONTACTO</li>
-                <li>SUCURSALES</li>
+                <li onClick={() => cambiarVista("Inicio")}>INICIO</li>
+                <li onClick={() => cambiarVista("AcercaDe")}>ACERCA DE</li>
+                <li onClick={() => cambiarVista("Productos")}>PRODUCTOS</li>
+                <li onClick={() => cambiarVista("Contacto")}>CONTACTO</li>
+                <li onClick={() => cambiarVista("Sucursales")}>SUCURSALES</li>
             </ul>
         </div>
     )
 }
-function Redes(){
-    return(
+
+
+function Redes() {
+    return (
         <div className='redesDiv'>
             <ul>
-                <li><img src={facebook} alt='Facebook'/></li>
-                <li><img src={whatsapp} alt='Whatsapp'/></li>
-                <li><img src={instagram} alt='Instagram'/></li>
-                <li><img src={youtube} alt='Youtube'/></li>
-                <li><img src={linkedin} alt='Linkedin'/></li>
+                <li><img src={facebook} alt='Facebook' /></li>
+                <li><img src={whatsapp} alt='Whatsapp' /></li>
+                <li><img src={instagram} alt='Instagram' /></li>
+                <li><img src={youtube} alt='Youtube' /></li>
+                <li><img src={linkedin} alt='Linkedin' /></li>
             </ul>
         </div>
     )
 }
+
 export default Encabezado

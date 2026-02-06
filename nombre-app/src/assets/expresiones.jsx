@@ -1,18 +1,15 @@
 import '../expresiones.css'
 
-function Expresiones(){
-    const nombre = "Jhony";
-    const apellido = "Ibarra Gonzalez";
-    
-    return(
-
-        <div className="expresionesContainer">
-            <h2>Expresiones</h2>
-            <p>Mi nombre es: {nombre} {apellido}</p>
-            
-            <Lista />
-        </div>
-    )
+function Expresiones({ vista }) {
+  return (
+    <div className="expresiones">
+      {vista === "Inicio" && <h1>WELCUMM!!!</h1>}
+      {vista === "AcercaDe" }
+      {vista === "Productos" && <h1>DE FINISIMA CALIDAD</h1>}
+      {vista === "Contacto" && <h1>Contáctanos</h1>}
+      {vista === "Sucursales" && <h1>Nuestras Sucursales</h1>}
+    </div>
+  );
 }
 
 function Lista(){
